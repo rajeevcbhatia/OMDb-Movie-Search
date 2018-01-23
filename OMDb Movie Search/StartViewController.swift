@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PopupDialog
 
 class StartViewController: UIViewController {
     
@@ -23,16 +24,13 @@ class StartViewController: UIViewController {
     
     @IBAction func btnGoClicked() {
         
+        textField.resignFirstResponder()
         guard let text = textField.text, text.trimmingCharacters(in: CharacterSet.whitespaces) != "" else {
             
-            //show popup
-            print("nope")
-            textField.becomeFirstResponder()
+            showNoTextPopup()
             return
             
         }
-        print("success")
-        textField.resignFirstResponder()
         performSegue(withIdentifier: "moviesListSegue", sender: nil)
         
     }
@@ -44,6 +42,20 @@ class StartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    func showNoTextPopup() {
+        let title = "Invalid search term"
+        let message = "Please enter a non empty search term!"
+        
+        let popup = PopupDialog(title: title, message: message)
+        let cancelButton = CancelButton(title: "CANCEL") { [weak self] in
+            self?.textField.becomeFirstResponder()
+        }
+        
+        popup.addButton(cancelButton)
+        
+        self.present(popup, animated: true, completion: nil)
     }
 
 }
