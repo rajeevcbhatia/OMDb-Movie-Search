@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartBG" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-iR-mlW">
+                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Yj-ggw">
                                 <rect key="frame" x="47" y="155" width="281" height="34"/>
                                 <nil key="textColor"/>
@@ -34,10 +37,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mhW-Yj-ggw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="7Sh-KY-TCB"/>
+                            <constraint firstItem="D3n-iR-mlW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CoL-b6-xxW"/>
+                            <constraint firstItem="D3n-iR-mlW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="FFO-tG-q6U"/>
                             <constraint firstItem="13I-IF-UwN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MqU-qQ-VQi"/>
                             <constraint firstItem="mhW-Yj-ggw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="Wcz-Fv-9jQ"/>
                             <constraint firstItem="13I-IF-UwN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bFe-f7-t7p"/>
                             <constraint firstItem="mhW-Yj-ggw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fAX-Rp-ibe"/>
+                            <constraint firstItem="D3n-iR-mlW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="p1n-54-GpK"/>
+                            <constraint firstItem="D3n-iR-mlW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pbl-DM-bNG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,4 +53,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="StartBG" width="514" height="960"/>
+    </resources>
 </document>

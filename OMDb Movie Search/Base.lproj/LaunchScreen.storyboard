@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="vSE-lf-S6S">
-                                <rect key="frame" x="0.0" y="62.5" width="375" height="562.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vSE-lf-S6S" secondAttribute="height" multiplier="2:3" id="wis-FE-2na"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="vSE-lf-S6S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647058823529409" green="0.72549019607843135" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vSE-lf-S6S" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UAp-K6-lPO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vSE-lf-S6S" secondAttribute="bottom" id="6aB-Rt-UCW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vSE-lf-S6S" secondAttribute="trailing" id="Um3-Jp-Jfi"/>
+                            <constraint firstItem="vSE-lf-S6S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cxX-tk-m31"/>
                             <constraint firstItem="vSE-lf-S6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wC4-Oo-dcr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
