@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xsT-AF-LQq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,30 +13,44 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="OMDb_Movie_Search" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="StartViewController" customModule="OMDb_Movie_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartBG" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-iR-mlW">
-                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Yj-ggw">
-                                <rect key="frame" x="47" y="155" width="281" height="34"/>
+                                <rect key="frame" x="47" y="166" width="281" height="34"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13I-IF-UwN">
-                                <rect key="frame" x="172" y="326.5" width="30" height="34"/>
+                                <rect key="frame" x="93.5" y="343.5" width="187.5" height="44"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.72549019609999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UgF-8t-Bfm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <state key="normal" title="Go!">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnGoClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ri5-FC-3W7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mhW-Yj-ggw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="7Sh-KY-TCB"/>
+                            <constraint firstItem="13I-IF-UwN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="AGr-Fu-KMx"/>
                             <constraint firstItem="D3n-iR-mlW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CoL-b6-xxW"/>
                             <constraint firstItem="D3n-iR-mlW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="FFO-tG-q6U"/>
                             <constraint firstItem="13I-IF-UwN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MqU-qQ-VQi"/>
@@ -44,13 +58,52 @@
                             <constraint firstItem="13I-IF-UwN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bFe-f7-t7p"/>
                             <constraint firstItem="mhW-Yj-ggw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fAX-Rp-ibe"/>
                             <constraint firstItem="D3n-iR-mlW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="p1n-54-GpK"/>
-                            <constraint firstItem="D3n-iR-mlW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pbl-DM-bNG"/>
+                            <constraint firstItem="D3n-iR-mlW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pbl-DM-bNG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qhT-e2-PbU"/>
+                    <connections>
+                        <outlet property="textField" destination="mhW-Yj-ggw" id="ddT-RA-ZJg"/>
+                        <segue destination="X7e-2s-3X7" kind="show" identifier="moviesListSegue" id="Ih3-Fb-2Ma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="412" y="37.331334332833585"/>
+        </scene>
+        <!--Movies List View Controller-->
+        <scene sceneID="dq3-TG-Z50">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="X7e-2s-3X7" customClass="MoviesListViewController" customModule="OMDb_Movie_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdv-Oh-gtg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KEJ-1I-om3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glK-s9-J6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aLs-CH-u83">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xsT-AF-LQq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VPa-E0-zQO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n2B-0E-2P1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fI1-J9-dN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299.19999999999999" y="-121.4392803598201"/>
         </scene>
     </scenes>
     <resources>

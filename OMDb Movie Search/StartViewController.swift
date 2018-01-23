@@ -9,17 +9,50 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.becomeFirstResponder()
+            textField.delegate = self
+        }
+    }
+    
+    @IBAction func btnGoClicked() {
+        
+        guard let text = textField.text, text.trimmingCharacters(in: CharacterSet.whitespaces) != "" else {
+            
+            //show popup
+            print("nope")
+            textField.becomeFirstResponder()
+            return
+            
+        }
+        print("success")
+        textField.resignFirstResponder()
+        performSegue(withIdentifier: "moviesListSegue", sender: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
-
 
 }
 
+extension StartViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        btnGoClicked()
+        return true
+    }
+    
+}

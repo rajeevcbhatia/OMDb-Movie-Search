@@ -7,6 +7,7 @@ target 'OMDb Movie Search' do
 
   # Pods for OMDb Movie Search
   pod 'Alamofire', '~> 4.5'
+  pod 'PopupDialog', '~> 0.7'
 
   target 'OMDb Movie SearchTests' do
     inherit! :search_paths
