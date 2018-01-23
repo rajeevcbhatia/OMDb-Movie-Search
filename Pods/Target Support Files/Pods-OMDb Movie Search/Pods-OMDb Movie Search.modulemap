@@ -1,0 +1,6 @@
+framework module Pods_OMDb_Movie_Search {
+  umbrella header "Pods-OMDb Movie Search-umbrella.h"
+
+  export *
+  module * { export * }
+}
