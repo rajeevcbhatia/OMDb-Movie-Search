@@ -1,6 +1,0 @@
-framework module Pods_OMDb_Movie_SearchTests {
-  umbrella header "Pods-OMDb Movie SearchTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
