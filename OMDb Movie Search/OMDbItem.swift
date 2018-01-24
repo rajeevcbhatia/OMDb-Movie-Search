@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct Root: Codable {
+    var Search: [OMDbItem]
+}
+
 struct OMDbItem: Codable {
     
     enum CodingKeys: String, CodingKey {
@@ -19,11 +23,11 @@ struct OMDbItem: Codable {
         case plot = "Plot"
     }
     
-    let title: String
-    let year: String
-    let id: String
-    let posterUrlString: String
-    let type: String
-    let plot: String
+    let title: String?
+    let year: String?
+    let id: String?
+    let posterUrlString: String?
+    let type: String?
+    let plot: String?
     
 }

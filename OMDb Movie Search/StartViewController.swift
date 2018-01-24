@@ -44,6 +44,12 @@ class StartViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let moviesListVC = segue.destination as? MoviesListViewController, let searchTerm = textField.text {
+            moviesListVC.currentSearchTerm = searchTerm
+        }
+    }
+    
     func showNoTextPopup() {
         let title = "Invalid search term"
         let message = "Please enter a non empty search term!"

@@ -9,6 +9,8 @@
 import UIKit
 
 class MoviesListViewController: UIViewController {
+    
+    var currentSearchTerm = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,12 @@ class MoviesListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
+        
+        APIClient.getMoviesList(searchTerm: currentSearchTerm) { [weak self] (result) in
+            guard let omdbItems = result else { return }
+            
+            print(omdbItems)
+        }
     }
 
 }

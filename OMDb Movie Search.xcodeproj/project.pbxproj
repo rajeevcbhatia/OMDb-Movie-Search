@@ -10,6 +10,8 @@
 		9A3EE20DF278B01A6C4FDC02 /* Pods_OMDb_Movie_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */; };
 		9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */; };
 		9AA361212017D65B005E168C /* OMDbItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361202017D65B005E168C /* OMDbItem.swift */; };
+		9AA361232019161E005E168C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361222019161E005E168C /* APIClient.swift */; };
+		9AA3612520191A6E005E168C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA3612420191A6D005E168C /* MobileCoreServices.framework */; };
 		9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E35F2016B48A000BC22A /* AppDelegate.swift */; };
 		9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E3612016B48A000BC22A /* StartViewController.swift */; };
 		9AF1E3652016B48A000BC22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1E3632016B48A000BC22A /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Movie_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		9AA361202017D65B005E168C /* OMDbItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbItem.swift; sourceTree = "<group>"; };
+		9AA361222019161E005E168C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9AA3612420191A6D005E168C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9AF1E35C2016B48A000BC22A /* OMDb Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1E35F2016B48A000BC22A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF1E3612016B48A000BC22A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA3612520191A6E005E168C /* MobileCoreServices.framework in Frameworks */,
 				BD1F66A3DF4371D2D852A8CA /* Pods_OMDb_Movie_Search.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +144,7 @@
 				9AF1E36B2016B48A000BC22A /* Info.plist */,
 				9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */,
 				9AA361202017D65B005E168C /* OMDbItem.swift */,
+				9AA361222019161E005E168C /* APIClient.swift */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 		D554810AE2D00DB78E0AA33D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AA3612420191A6D005E168C /* MobileCoreServices.framework */,
 				FEF865212C3D55C382E019C9 /* Pods_OMDb_Movie_Search.framework */,
 				937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */,
 				C65CBC6E5257E2740C2A547E /* Pods_OMDb_Movie_SearchUITests.framework */,
@@ -455,6 +462,7 @@
 				9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */,
 				9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */,
 				9AA361212017D65B005E168C /* OMDbItem.swift in Sources */,
+				9AA361232019161E005E168C /* APIClient.swift in Sources */,
 				9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
