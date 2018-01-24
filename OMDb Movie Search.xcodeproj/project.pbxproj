@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A3EE20DF278B01A6C4FDC02 /* Pods_OMDb_Movie_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */; };
 		9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */; };
+		9AA361212017D65B005E168C /* OMDbItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361202017D65B005E168C /* OMDbItem.swift */; };
 		9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E35F2016B48A000BC22A /* AppDelegate.swift */; };
 		9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E3612016B48A000BC22A /* StartViewController.swift */; };
 		9AF1E3652016B48A000BC22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1E3632016B48A000BC22A /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		81DC33B1C9B5B43937B7AA54 /* Pods-OMDb Movie Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Movie Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb Movie Search/Pods-OMDb Movie Search.release.xcconfig"; sourceTree = "<group>"; };
 		937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Movie_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		9AA361202017D65B005E168C /* OMDbItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbItem.swift; sourceTree = "<group>"; };
 		9AF1E35C2016B48A000BC22A /* OMDb Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1E35F2016B48A000BC22A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF1E3612016B48A000BC22A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				9AF1E3682016B48A000BC22A /* LaunchScreen.storyboard */,
 				9AF1E36B2016B48A000BC22A /* Info.plist */,
 				9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */,
+				9AA361202017D65B005E168C /* OMDbItem.swift */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			files = (
 				9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */,
 				9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */,
+				9AA361212017D65B005E168C /* OMDbItem.swift in Sources */,
 				9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
