@@ -11,6 +11,8 @@ import UIKit
 class MoviesListViewController: UIViewController {
     
     var currentSearchTerm = ""
+    
+    var items = [OMDbItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class MoviesListViewController: UIViewController {
             guard let omdbItems = result else { return }
             
             print(omdbItems)
+            self?.items = omdbItems
         }
     }
 

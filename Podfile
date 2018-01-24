@@ -9,6 +9,7 @@ target 'OMDb Movie Search' do
   pod 'Alamofire', '~> 4.5'
   pod 'PopupDialog', '~> 0.7'
   pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'OMDb Movie SearchTests' do
     inherit! :search_paths
