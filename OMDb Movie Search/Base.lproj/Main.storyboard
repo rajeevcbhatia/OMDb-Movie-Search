@@ -150,11 +150,27 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="lyb-UK-Xvq" id="9vj-p8-BS2"/>
+                        <segue destination="FP5-3E-xMg" kind="show" identifier="movieDetailSegue" id="EIA-bT-UV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glK-s9-J6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2298" y="-200"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="ihE-Nl-VTP">
+            <objects>
+                <viewController id="FP5-3E-xMg" customClass="MovieDetailViewController" customModule="OMDb_Movie_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6RR-h5-AA9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="4Gj-xB-ZxB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-8R-ZM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3417" y="-194"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aLs-CH-u83">

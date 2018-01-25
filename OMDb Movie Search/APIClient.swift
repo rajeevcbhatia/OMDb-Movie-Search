@@ -33,4 +33,24 @@ class APIClient {
         }
     }
     
+    static func getMovieDetails(id: String, completion: @escaping (_ result: OMDbItem?) -> Void) {
+        
+        let urlString = "http://www.omdbapi.com/?apikey=\(APIClient.apiKey)&i=\(id)&plot=full"
+        
+        Alamofire.request(urlString).responseData { response in
+            
+            guard let responseData = response.data else {
+                completion(nil)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            let searchResult = try? decoder.decode(OMDbItem.self, from: responseData)
+            
+            completion(searchResult)
+            
+        }
+        
+    }
+    
 }

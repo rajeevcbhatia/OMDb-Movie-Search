@@ -25,7 +25,7 @@ struct OMDbItem: Codable {
     
     let title: String?
     let year: String?
-    let id: String?
+    let id: String
     let posterUrlString: String?
     let type: String?
     let plot: String?

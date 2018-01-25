@@ -36,6 +36,12 @@ class MoviesListViewController: UIViewController {
             self?.items = omdbItems
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieDetailsVC = segue.destination as? MovieDetailViewController, let id = sender as? String {
+            movieDetailsVC.itemId = id
+        }
+    }
 
 }
 
@@ -65,6 +71,10 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "movieDetailSegue", sender: items[indexPath.row].id)
     }
     
 }

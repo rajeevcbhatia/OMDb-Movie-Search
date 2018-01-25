@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670AC558201A1F4C00FFF3F5 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */; };
 		9A3EE20DF278B01A6C4FDC02 /* Pods_OMDb_Movie_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */; };
 		9A72D2AD20193F0700F7400B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */; };
 		9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */; };
@@ -45,6 +46,7 @@
 		0B2DF46C68E21BC279F25940 /* Pods-OMDb Movie SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Movie SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb Movie SearchTests/Pods-OMDb Movie SearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		511157DA077A8A9FBFEA7847 /* Pods-OMDb Movie SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Movie SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb Movie SearchUITests/Pods-OMDb Movie SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB6AEAFF1DE51D2CF9FA81A /* Pods-OMDb Movie Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Movie Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb Movie Search/Pods-OMDb Movie Search.debug.xcconfig"; sourceTree = "<group>"; };
+		670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		81DC33B1C9B5B43937B7AA54 /* Pods-OMDb Movie Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDb Movie Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDb Movie Search/Pods-OMDb Movie Search.release.xcconfig"; sourceTree = "<group>"; };
 		937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Movie_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				9AA361222019161E005E168C /* APIClient.swift */,
 				9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */,
 				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
+				670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */,
 				9AA361212017D65B005E168C /* OMDbItem.swift in Sources */,
 				9AA361232019161E005E168C /* APIClient.swift in Sources */,
+				670AC558201A1F4C00FFF3F5 /* MovieDetailViewController.swift in Sources */,
 				9A72D2AD20193F0700F7400B /* ItemTableViewCell.swift in Sources */,
 				9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */,
 			);
