@@ -46,7 +46,7 @@ class StartViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let moviesListVC = segue.destination as? MoviesListViewController, let searchTerm = textField.text {
-            moviesListVC.currentSearchTerm = searchTerm
+            moviesListVC.currentSearchTerm = searchTerm.trimmingCharacters(in: CharacterSet.whitespaces)
         }
     }
     

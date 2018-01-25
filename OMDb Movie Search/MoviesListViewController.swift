@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesListViewController: UIViewController {
     
@@ -57,14 +58,7 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
                 return UITableViewCell()
         }
         
-        let item = items[indexPath.row]
-        
-        cell.imgView.sd_setImage(with: URL(string: item.posterUrlString ?? "http://baltimoresportsandlife.com/wp-content/uploads/2016/07/Movies.jpg")) { (image, error, cacheType, url) in
-            cell.setNeedsLayout()
-        }
-        
-        cell.nameLabel.text = item.title
-        cell.typeLabel.text = item.type
+        cell.loadDetails(item: items[indexPath.row])
         
         return cell
     }
@@ -74,7 +68,7 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "movieDetailSegue", sender: items[indexPath.row].id)
+//        performSegue(withIdentifier: "movieDetailSegue", sender: items[indexPath.row].id)
     }
     
 }
