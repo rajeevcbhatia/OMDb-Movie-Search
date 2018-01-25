@@ -126,6 +126,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9A72D2B5201A62A200F7400B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9AF1E3612016B48A000BC22A /* StartViewController.swift */,
+				9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */,
+				670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		9AF1E3532016B48A000BC22A = {
 			isa = PBXGroup;
 			children = (
@@ -153,17 +163,15 @@
 			children = (
 				9A72D2B2201A5F2100F7400B /* Extensions */,
 				9AF1E35F2016B48A000BC22A /* AppDelegate.swift */,
-				9AF1E3612016B48A000BC22A /* StartViewController.swift */,
+				9A72D2B5201A62A200F7400B /* ViewControllers */,
 				9AF1E3632016B48A000BC22A /* Main.storyboard */,
 				9AF1E3662016B48A000BC22A /* Assets.xcassets */,
 				9AF1E3682016B48A000BC22A /* LaunchScreen.storyboard */,
 				9AF1E36B2016B48A000BC22A /* Info.plist */,
-				9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */,
 				9AA361202017D65B005E168C /* OMDbItem.swift */,
 				9AA361222019161E005E168C /* APIClient.swift */,
 				9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */,
 				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
-				670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
