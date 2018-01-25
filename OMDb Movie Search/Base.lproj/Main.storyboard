@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -93,6 +94,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fEY-lg-z9L">
                                                     <rect key="frame" x="-0.5" y="0.0" width="375" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fEY-lg-z9L" secondAttribute="height" multiplier="375:169" id="KFX-MO-Sos"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-wN-nns">
                                                     <rect key="frame" x="15" y="111" width="345" height="43"/>
@@ -108,13 +112,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fEY-lg-z9L" firstAttribute="centerY" secondItem="fkj-72-3zF" secondAttribute="centerY" id="2ZY-S5-Fgw"/>
                                                 <constraint firstAttribute="bottom" secondItem="fEY-lg-z9L" secondAttribute="bottom" id="5TI-h2-g6f"/>
                                                 <constraint firstItem="VXI-Om-y4x" firstAttribute="leading" secondItem="xDA-wN-nns" secondAttribute="leading" id="96T-4D-ory"/>
                                                 <constraint firstItem="fEY-lg-z9L" firstAttribute="top" secondItem="fkj-72-3zF" secondAttribute="top" id="9ni-bn-3D4"/>
                                                 <constraint firstAttribute="trailing" secondItem="xDA-wN-nns" secondAttribute="trailing" constant="15" id="EyR-mj-OrI"/>
                                                 <constraint firstItem="fEY-lg-z9L" firstAttribute="height" secondItem="fkj-72-3zF" secondAttribute="height" id="Gj7-Oj-YRv"/>
-                                                <constraint firstItem="fEY-lg-z9L" firstAttribute="centerX" secondItem="fkj-72-3zF" secondAttribute="centerX" id="Im3-6k-fA9"/>
                                                 <constraint firstAttribute="bottom" secondItem="xDA-wN-nns" secondAttribute="bottom" constant="15" id="QEP-rM-l2h"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VXI-Om-y4x" secondAttribute="trailing" constant="20" symbolic="YES" id="er8-gn-gMo"/>
                                                 <constraint firstItem="xDA-wN-nns" firstAttribute="top" secondItem="VXI-Om-y4x" secondAttribute="bottom" constant="12" id="fZx-cn-dKU"/>
@@ -152,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glK-s9-J6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="36.431784107946029"/>
+            <point key="canvasLocation" x="2298" y="-200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aLs-CH-u83">

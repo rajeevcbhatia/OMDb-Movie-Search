@@ -53,7 +53,9 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
         
         let item = items[indexPath.row]
         
-        cell.imgView.sd_setImage(with: URL(string: item.posterUrlString ?? "http://baltimoresportsandlife.com/wp-content/uploads/2016/07/Movies.jpg"), completed: nil)
+        cell.imgView.sd_setImage(with: URL(string: item.posterUrlString ?? "http://baltimoresportsandlife.com/wp-content/uploads/2016/07/Movies.jpg")) { (image, error, cacheType, url) in
+            cell.setNeedsLayout()
+        }
         
         cell.nameLabel.text = item.title
         cell.typeLabel.text = item.type
