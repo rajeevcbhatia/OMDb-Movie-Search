@@ -68,7 +68,7 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "movieDetailSegue", sender: items[indexPath.row].id)
+        performSegue(withIdentifier: "movieDetailSegue", sender: items[indexPath.row].id)
     }
     
 }
