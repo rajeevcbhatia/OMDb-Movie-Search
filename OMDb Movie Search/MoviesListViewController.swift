@@ -12,8 +12,13 @@ class MoviesListViewController: UIViewController {
     
     var currentSearchTerm = ""
     
-    var items = [OMDbItem]()
+    var items = [OMDbItem]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +37,32 @@ class MoviesListViewController: UIViewController {
         }
     }
 
+}
+
+extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell  = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemTableViewCell
+            else {
+                return UITableViewCell()
+        }
+        
+        let item = items[indexPath.row]
+        
+        cell.imgView.sd_setImage(with: URL(string: item.posterUrlString ?? "http://baltimoresportsandlife.com/wp-content/uploads/2016/07/Movies.jpg"), completed: nil)
+        
+        cell.nameLabel.text = item.title
+        cell.typeLabel.text = item.type
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 170
+    }
+    
 }
