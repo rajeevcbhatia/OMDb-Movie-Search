@@ -20,11 +20,6 @@ class MoviesListViewController: UIViewController {
     }
 
     @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,8 +27,6 @@ class MoviesListViewController: UIViewController {
         
         APIClient.getMoviesList(searchTerm: currentSearchTerm) { [weak self] (result) in
             guard let omdbItems = result else { return }
-            
-            print(omdbItems)
             self?.items = omdbItems
         }
     }
@@ -61,10 +54,6 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.loadDetails(item: items[indexPath.row])
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

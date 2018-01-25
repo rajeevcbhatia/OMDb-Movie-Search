@@ -93,6 +93,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D8W-3C-ZRD">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="169.5" id="L8r-pm-0jh"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-1h-RTI">
                                                     <rect key="frame" x="15" y="124.5" width="345" height="30"/>
