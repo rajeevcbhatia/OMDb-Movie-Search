@@ -23,14 +23,18 @@ class APIClient {
                 return
             }
             
-            let decoder = JSONDecoder()
-            let searchResult = try? decoder.decode(Root.self, from: responseData)
-            
-            guard let items = searchResult?.Search else { return }
+            let items = decodeMoviesList(data: responseData)
             
             completion(items)
             
         }
+    }
+    
+    static func decodeMoviesList(data: Data) -> [OMDbItem]? {
+        let decoder = JSONDecoder()
+        let searchResult = try? decoder.decode(Root.self, from: data)
+        
+        return searchResult?.Search
     }
     
     static func getMovieDetails(id: String, completion: @escaping (_ result: OMDbItem?) -> Void) {
@@ -44,13 +48,18 @@ class APIClient {
                 return
             }
             
-            let decoder = JSONDecoder()
-            let searchResult = try? decoder.decode(OMDbItem.self, from: responseData)
+            let searchResult = decodeMovie(data: responseData)
             
             completion(searchResult)
             
         }
         
+    }
+    
+    static func decodeMovie(data: Data) -> OMDbItem? {
+        let decoder = JSONDecoder()
+        let searchResult = try? decoder.decode(OMDbItem.self, from: data)
+        return searchResult
     }
     
 }
