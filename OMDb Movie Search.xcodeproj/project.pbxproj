@@ -15,6 +15,7 @@
 		9AA361232019161E005E168C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361222019161E005E168C /* APIClient.swift */; };
 		9AA3612520191A6E005E168C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA3612420191A6D005E168C /* MobileCoreServices.framework */; };
 		9AB3D85A201D36D4009F82D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3D859201D36D4009F82D3 /* Constants.swift */; };
+		9AB3D85C201D4018009F82D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3D85B201D4018009F82D3 /* BaseViewController.swift */; };
 		9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E35F2016B48A000BC22A /* AppDelegate.swift */; };
 		9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E3612016B48A000BC22A /* StartViewController.swift */; };
 		9AF1E3652016B48A000BC22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1E3632016B48A000BC22A /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		9AA361222019161E005E168C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9AA3612420191A6D005E168C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9AB3D859201D36D4009F82D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9AB3D85B201D4018009F82D3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9AF1E35C2016B48A000BC22A /* OMDb Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1E35F2016B48A000BC22A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF1E3612016B48A000BC22A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				9AF1E3612016B48A000BC22A /* StartViewController.swift */,
 				9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */,
 				670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */,
+				9AB3D85B201D4018009F82D3 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				9AA361212017D65B005E168C /* OMDbItem.swift in Sources */,
 				9AA361232019161E005E168C /* APIClient.swift in Sources */,
 				670AC558201A1F4C00FFF3F5 /* MovieDetailViewController.swift in Sources */,
+				9AB3D85C201D4018009F82D3 /* BaseViewController.swift in Sources */,
 				9A72D2AD20193F0700F7400B /* ItemTableViewCell.swift in Sources */,
 				9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */,
 				9AB3D85A201D36D4009F82D3 /* Constants.swift in Sources */,

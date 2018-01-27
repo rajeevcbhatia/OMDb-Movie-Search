@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class MoviesListViewController: UIViewController {
+class MoviesListViewController: BaseViewController {
     
     var currentSearchTerm = ""
     

@@ -9,11 +9,7 @@
 import UIKit
 import PopupDialog
 
-class StartViewController: UIViewController {
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+class StartViewController: BaseViewController {
 
     @IBOutlet weak var textField: UITextField! {
         didSet {
