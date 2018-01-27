@@ -10,11 +10,11 @@
 		670AC558201A1F4C00FFF3F5 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670AC557201A1F4C00FFF3F5 /* MovieDetailViewController.swift */; };
 		9A3EE20DF278B01A6C4FDC02 /* Pods_OMDb_Movie_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */; };
 		9A72D2AD20193F0700F7400B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */; };
-		9A72D2B4201A5F4C00F7400B /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72D2B3201A5F4C00F7400B /* UILabel+extension.swift */; };
 		9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */; };
 		9AA361212017D65B005E168C /* OMDbItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361202017D65B005E168C /* OMDbItem.swift */; };
 		9AA361232019161E005E168C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA361222019161E005E168C /* APIClient.swift */; };
 		9AA3612520191A6E005E168C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA3612420191A6D005E168C /* MobileCoreServices.framework */; };
+		9AB3D85A201D36D4009F82D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3D859201D36D4009F82D3 /* Constants.swift */; };
 		9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E35F2016B48A000BC22A /* AppDelegate.swift */; };
 		9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1E3612016B48A000BC22A /* StartViewController.swift */; };
 		9AF1E3652016B48A000BC22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1E3632016B48A000BC22A /* Main.storyboard */; };
@@ -52,11 +52,11 @@
 		937A8E0EA55A2701EDB61A0D /* Pods_OMDb_Movie_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDb_Movie_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OMDb Movie Search-Bridging-Header.h"; sourceTree = "<group>"; };
-		9A72D2B3201A5F4C00F7400B /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		9AA3611E2017CBD9005E168C /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		9AA361202017D65B005E168C /* OMDbItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDbItem.swift; sourceTree = "<group>"; };
 		9AA361222019161E005E168C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9AA3612420191A6D005E168C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9AB3D859201D36D4009F82D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9AF1E35C2016B48A000BC22A /* OMDb Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMDb Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1E35F2016B48A000BC22A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF1E3612016B48A000BC22A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 		9A72D2B2201A5F2100F7400B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9A72D2B3201A5F4C00F7400B /* UILabel+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 				9AA361222019161E005E168C /* APIClient.swift */,
 				9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */,
 				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
+				9AB3D859201D36D4009F82D3 /* Constants.swift */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
@@ -507,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A72D2B4201A5F4C00F7400B /* UILabel+extension.swift in Sources */,
 				9AF1E3622016B48A000BC22A /* StartViewController.swift in Sources */,
 				9AF1E3602016B48A000BC22A /* AppDelegate.swift in Sources */,
 				9AA361212017D65B005E168C /* OMDbItem.swift in Sources */,
@@ -515,6 +514,7 @@
 				670AC558201A1F4C00FFF3F5 /* MovieDetailViewController.swift in Sources */,
 				9A72D2AD20193F0700F7400B /* ItemTableViewCell.swift in Sources */,
 				9AA3611F2017CBD9005E168C /* MoviesListViewController.swift in Sources */,
+				9AB3D85A201D36D4009F82D3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
