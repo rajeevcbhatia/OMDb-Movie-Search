@@ -118,13 +118,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9A72D2B2201A5F2100F7400B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		9A72D2B5201A62A200F7400B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +153,6 @@
 		9AF1E35E2016B48A000BC22A /* OMDb Movie Search */ = {
 			isa = PBXGroup;
 			children = (
-				9A72D2B2201A5F2100F7400B /* Extensions */,
 				9AF1E35F2016B48A000BC22A /* AppDelegate.swift */,
 				9A72D2B5201A62A200F7400B /* ViewControllers */,
 				9AF1E3632016B48A000BC22A /* Main.storyboard */,

@@ -19,6 +19,9 @@ class MovieDetailViewController: UIViewController {
     }
 
     @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var plotLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,10 @@ class MovieDetailViewController: UIViewController {
         guard let loadedItem = item else { return }
         
         posterImageView.sd_setImage(with: URL(string:loadedItem.posterUrlString ?? ""), completed: nil)
+        
+        typeLabel.text = item?.type?.uppercased() ?? ""
+        nameLabel.text = item?.title?.uppercased() ?? ""
+        plotLabel.text = item?.plot ?? ""
     }
 
 }
