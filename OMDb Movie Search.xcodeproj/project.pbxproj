@@ -120,6 +120,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A449013201D4491005E6488 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AA361202017D65B005E168C /* OMDbItem.swift */,
+				9AA361222019161E005E168C /* APIClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A449014201D44A2005E6488 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9A72D2B5201A62A200F7400B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +179,8 @@
 				9AF1E3662016B48A000BC22A /* Assets.xcassets */,
 				9AF1E3682016B48A000BC22A /* LaunchScreen.storyboard */,
 				9AF1E36B2016B48A000BC22A /* Info.plist */,
-				9AA361202017D65B005E168C /* OMDbItem.swift */,
-				9AA361222019161E005E168C /* APIClient.swift */,
-				9A72D2AC20193F0700F7400B /* ItemTableViewCell.swift */,
+				9A449013201D4491005E6488 /* Model */,
+				9A449014201D44A2005E6488 /* Views */,
 				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
 				9AB3D859201D36D4009F82D3 /* Constants.swift */,
 			);
