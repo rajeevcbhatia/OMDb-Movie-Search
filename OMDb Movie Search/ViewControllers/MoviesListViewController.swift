@@ -15,7 +15,9 @@ class MoviesListViewController: BaseViewController {
     
     var items = [OMDbItem]() {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
 

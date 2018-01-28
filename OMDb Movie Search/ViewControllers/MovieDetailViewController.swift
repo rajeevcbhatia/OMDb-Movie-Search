@@ -14,7 +14,9 @@ class MovieDetailViewController: BaseViewController {
     
     var item: OMDbItem? {
         didSet {
-            loadUI()
+            DispatchQueue.main.async { [weak self] in
+                self?.loadUI()
+            }
         }
     }
 

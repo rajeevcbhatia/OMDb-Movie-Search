@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 class APIClient {
     
@@ -16,9 +15,20 @@ class APIClient {
     static func getMoviesList(searchTerm: String, completion: @escaping (_ result: [OMDbItem]?) -> Void) {
         let urlString = "http://www.omdbapi.com/?apikey=\(APIClient.apiKey)&s=\(searchTerm)"
         
-        Alamofire.request(urlString).responseData { response in
-            
-            guard let responseData = response.data else {
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL")
+            completion(nil)
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: urlRequest) {
+            (data, response, error) in
+        
+            guard let responseData = data else {
                 completion(nil)
                 return
             }
@@ -28,6 +38,8 @@ class APIClient {
             completion(items)
             
         }
+        
+        task.resume()
     }
     
     static func decodeMoviesList(data: Data) -> [OMDbItem]? {
@@ -41,9 +53,20 @@ class APIClient {
         
         let urlString = "http://www.omdbapi.com/?apikey=\(APIClient.apiKey)&i=\(id)&plot=full"
         
-        Alamofire.request(urlString).responseData { response in
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL")
+            completion(nil)
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: urlRequest) {
+            (data, response, error) in
             
-            guard let responseData = response.data else {
+            guard let responseData = data else {
                 completion(nil)
                 return
             }
@@ -53,6 +76,7 @@ class APIClient {
             completion(searchResult)
             
         }
+        task.resume()
         
     }
     

@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.6.0)
   - DynamicBlurView (2.0.2)
   - MBProgressHUD (1.1.0)
   - PopupDialog (0.7.0):
@@ -9,18 +8,16 @@ PODS:
   - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
   - MBProgressHUD (~> 1.1.0)
   - PopupDialog (~> 0.7)
   - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   PopupDialog: 4abc6db5b22b7c8029e2162bde8891ee6aa4b6c8
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: 69f7d7227710edf850afe0d7d05428ae98507847
+PODFILE CHECKSUM: a3e798ced6288bd3f482dea7c3805a266d3067c7
 
 COCOAPODS: 1.2.1

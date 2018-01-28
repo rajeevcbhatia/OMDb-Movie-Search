@@ -6,7 +6,6 @@ target 'OMDb Movie Search' do
   use_frameworks!
 
   # Pods for OMDb Movie Search
-  pod 'Alamofire', '~> 4.5'
   pod 'PopupDialog', '~> 0.7'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SDWebImage', '~> 4.0'
