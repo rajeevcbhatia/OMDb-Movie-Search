@@ -10,6 +10,13 @@ import UIKit
 
 class MovieDetailViewController: BaseViewController {
     
+    //MARK:- Outlets and actions
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var plotLabel: UILabel!
+    
+    //MARK:- custom properties
     var itemId = ""
     
     var item: OMDbItem? {
@@ -19,12 +26,8 @@ class MovieDetailViewController: BaseViewController {
             }
         }
     }
-
-    @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var plotLabel: UILabel!
     
+    //MARK:- UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         showLoadingIndicator()
@@ -43,6 +46,7 @@ class MovieDetailViewController: BaseViewController {
         }
     }
     
+    //MARK:- Custom functions
     func loadUI() {
         guard let loadedItem = item else { return }
         

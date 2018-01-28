@@ -42,6 +42,7 @@ class APIClient {
         task.resume()
     }
     
+    /** uses JSONDecoder to decode response data and returns the search terms */
     static func decodeMoviesList(data: Data) -> [OMDbItem]? {
         let decoder = JSONDecoder()
         let searchResult = try? decoder.decode(Root.self, from: data)
@@ -80,6 +81,7 @@ class APIClient {
         
     }
     
+    /** uses JSONDecoder to decode response data and returns the item */
     static func decodeMovie(data: Data) -> OMDbItem? {
         let decoder = JSONDecoder()
         let searchResult = try? decoder.decode(OMDbItem.self, from: data)

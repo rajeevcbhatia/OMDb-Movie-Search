@@ -10,6 +10,8 @@ import UIKit
 
 class StartViewController: BaseViewController {
 
+    //MARK:- outlets and actions
+    
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.becomeFirstResponder()
@@ -22,7 +24,7 @@ class StartViewController: BaseViewController {
         textField.resignFirstResponder()
         guard let text = textField.text, text.trimmingCharacters(in: CharacterSet.whitespaces) != "" else {
             
-            showNoTextPopup()
+            AlertHelper.display(presenter: self, title: OMSStrings.noSearchTermTitle, message: OMSStrings.noSearchTermMessage, dismissCompletion: nil)
             return
             
         }
@@ -30,6 +32,7 @@ class StartViewController: BaseViewController {
         
     }
     
+    // MARK:- UIViewController methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
@@ -40,16 +43,10 @@ class StartViewController: BaseViewController {
             moviesListVC.currentSearchTerm = searchTerm.trimmingCharacters(in: CharacterSet.whitespaces)
         }
     }
-    
-    func showNoTextPopup() {
-        let title = OMSStrings.noSearchTermTitle
-        let message = OMSStrings.noSearchTermMessage
-        
-        AlertHelper.display(presenter: self, title: title, message: message, dismissCompletion: nil)
-    }
 
 }
 
+//MARK:- UITextFieldDelegate
 extension StartViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

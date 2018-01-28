@@ -10,7 +10,15 @@ import UIKit
 import SDWebImage
 
 class MoviesListViewController: BaseViewController {
+
+    //MARK:- Outlets and actions
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.separatorStyle = .none
+        }
+    }
     
+    //MARK:- custom properties
     var currentSearchTerm = ""
     
     var items = [OMDbItem]() {
@@ -20,13 +28,8 @@ class MoviesListViewController: BaseViewController {
             }
         }
     }
-
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.separatorStyle = .none
-        }
-    }
     
+    //MARK:- UIViewController methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
@@ -55,6 +58,7 @@ class MoviesListViewController: BaseViewController {
 
 }
 
+//MARK:- TableView
 extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
