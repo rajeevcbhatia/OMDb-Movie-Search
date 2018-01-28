@@ -42,10 +42,10 @@ class StartViewController: BaseViewController {
     }
     
     func showNoTextPopup() {
-        let title = "Invalid search term"
-        let message = "Please enter a non empty search term!"
+        let title = OMSStrings.noSearchTermTitle
+        let message = OMSStrings.noSearchTermMessage
         
-        AlertHelper.display(presenter: self, title: title, message: message)
+        AlertHelper.display(presenter: self, title: title, message: message, dismissCompletion: nil)
     }
 
 }

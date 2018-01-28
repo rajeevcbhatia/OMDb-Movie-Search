@@ -28,7 +28,16 @@ class MoviesListViewController: BaseViewController {
         navigationController?.isNavigationBarHidden = false
         
         APIClient.getMoviesList(searchTerm: currentSearchTerm) { [weak self] (result) in
-            guard let omdbItems = result else { return }
+            guard let omdbItems = result else {
+                
+                if let strongSelf = self {
+                    AlertHelper.display(presenter: strongSelf, title: OMSStrings.noResultsFoundTitle, message: OMSStrings.noResultsFoundMessage, dismissCompletion: { [weak self] (action) in
+                        self?.navigationController?.popViewController(animated: true)
+                    })
+                }
+                return
+                
+            }
             self?.items = omdbItems
         }
     }
