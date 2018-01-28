@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
     
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
+    //MARK:- UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         addActivityIndicator()
@@ -21,6 +22,8 @@ class BaseViewController: UIViewController {
         print("deinit \(String(describing: self))")
     }
     
+    //MARK:- activity indicator
+    
     private func addActivityIndicator() {
         activityIndicator.center = view.center
         activityIndicator.color = UIColor.gray
@@ -28,12 +31,14 @@ class BaseViewController: UIViewController {
         activityIndicator.stopAnimating()
     }
     
+    /** shows a gray activity indicator in the center of the screen on the main thread */
     func showLoadingIndicator() {
         DispatchQueue.main.async { [weak self] in
             self?.activityIndicator.startAnimating()
         }
     }
     
+    /** hides the activity indicator */
     func hideLoadingIndicator() {
         DispatchQueue.main.async { [weak self] in
             self?.activityIndicator.stopAnimating()

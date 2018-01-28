@@ -139,6 +139,35 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9A449019201E15DC005E6488 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9AF1E3632016B48A000BC22A /* Main.storyboard */,
+				9AF1E3682016B48A000BC22A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9A44901A201E15F0005E6488 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AF1E35F2016B48A000BC22A /* AppDelegate.swift */,
+				9AF1E3662016B48A000BC22A /* Assets.xcassets */,
+				9AF1E36B2016B48A000BC22A /* Info.plist */,
+				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A44901B201E15FF005E6488 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9AB3D859201D36D4009F82D3 /* Constants.swift */,
+				9A449017201D52C4005E6488 /* AlertHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9A72D2B5201A62A200F7400B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,17 +204,12 @@
 		9AF1E35E2016B48A000BC22A /* OMDb Movie Search */ = {
 			isa = PBXGroup;
 			children = (
-				9AF1E35F2016B48A000BC22A /* AppDelegate.swift */,
-				9A72D2B5201A62A200F7400B /* ViewControllers */,
-				9AF1E3632016B48A000BC22A /* Main.storyboard */,
-				9AF1E3662016B48A000BC22A /* Assets.xcassets */,
-				9AF1E3682016B48A000BC22A /* LaunchScreen.storyboard */,
-				9AF1E36B2016B48A000BC22A /* Info.plist */,
 				9A449013201D4491005E6488 /* Model */,
 				9A449014201D44A2005E6488 /* Views */,
-				9A72D2AF2019488700F7400B /* OMDb Movie Search-Bridging-Header.h */,
-				9AB3D859201D36D4009F82D3 /* Constants.swift */,
-				9A449017201D52C4005E6488 /* AlertHelper.swift */,
+				9A72D2B5201A62A200F7400B /* ViewControllers */,
+				9A449019201E15DC005E6488 /* Storyboards */,
+				9A44901B201E15FF005E6488 /* Utilities */,
+				9A44901A201E15F0005E6488 /* Supporting Files */,
 			);
 			path = "OMDb Movie Search";
 			sourceTree = "<group>";
