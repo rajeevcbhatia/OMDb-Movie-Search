@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PopupDialog
 
 class StartViewController: BaseViewController {
 
@@ -46,14 +45,7 @@ class StartViewController: BaseViewController {
         let title = "Invalid search term"
         let message = "Please enter a non empty search term!"
         
-        let popup = PopupDialog(title: title, message: message)
-        let cancelButton = CancelButton(title: "CANCEL") { [weak self] in
-            self?.textField.becomeFirstResponder()
-        }
-        
-        popup.addButton(cancelButton)
-        
-        self.present(popup, animated: true, completion: nil)
+        AlertHelper.display(presenter: self, title: title, message: message)
     }
 
 }
