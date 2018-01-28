@@ -43,10 +43,10 @@ class OMDb_Movie_SearchTests: XCTestCase {
         XCTAssert(jsonData != nil, "could not decode json string")
         
         
-        let itemsList = APIClient.decodeMoviesList(data: jsonData!)
+        let itemsList: Root? = APIClient.decode(data: jsonData!)
         
         XCTAssert(itemsList != nil, "nil response received")
-        XCTAssert(itemsList!.count > 0, "no items decoded")
+        XCTAssert(itemsList!.Search.count > 0, "no items decoded")
         
     }
     
@@ -70,9 +70,9 @@ class OMDb_Movie_SearchTests: XCTestCase {
         
         XCTAssert(jsonData != nil, "could not decode json string")
         
-        let itemsList = APIClient.decodeMovie(data: jsonData!)
+        let item: OMDbItem? = APIClient.decode(data: jsonData!)
         
-        XCTAssert(itemsList != nil, "could not decode")
+        XCTAssert(item != nil, "could not decode")
     }
     
 }
