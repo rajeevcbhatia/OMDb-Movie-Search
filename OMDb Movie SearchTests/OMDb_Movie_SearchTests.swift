@@ -50,4 +50,29 @@ class OMDb_Movie_SearchTests: XCTestCase {
         
     }
     
+    func testItemResponse() {
+        let expectation = XCTestExpectation(description: "api expectation")
+        
+        let id = "tt0108778"
+        APIClient.getMovieDetails(id: id) { (item) in
+            XCTAssert(item != nil, "item details not found")
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testItemDecode() {
+        
+        let jsonString = "{\"Title\":\"Friends\",\"Year\":\"1994–2004\",\"Rated\":\"TV-14\",\"Released\":\"22 Sep 1994\",\"Runtime\":\"22 min\",\"Genre\":\"Comedy, Romance\",\"Director\":\"N/A\",\"Writer\":\"David Crane, Marta Kauffman\",\"Actors\":\"Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc\",\"Plot\":\"Rachel Green, Ross Geller, Monica Geller, Joey Tribbiani, Chandler Bing and Phoebe Buffay are all friends, living off of one another in the heart of New York City. Over the course of ten years, this average group of buddies goes through massive mayhem, family trouble, past and future romances, fights, laughs, tears and surprises as they learn what it really means to be a friend.\",\"Language\":\"English, Dutch, Italian, French\",\"Country\":\"USA\",\"Awards\":\"Won 1 Golden Globe. Another 68 wins & 211 nominations.\",\"Poster\":\"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NzEyNzQ5OF5BMl5BanBnXkFtZTYwNTY3NDg4._V1._CR24,0,293,443_SX89_AL_.jpg_V1_SX300.jpg\",\"Ratings\":[{\"Source\":\"Internet Movie Database\",\"Value\":\"8.9/10\"}],\"Metascore\":\"N/A\",\"imdbRating\":\"8.9\",\"imdbVotes\":\"566,255\",\"imdbID\":\"tt0108778\",\"Type\":\"series\",\"totalSeasons\":\"10\",\"Response\":\"True\"}"
+        
+        let jsonData = jsonString.data(using: String.Encoding.utf8)
+        
+        XCTAssert(jsonData != nil, "could not decode json string")
+        
+        let itemsList = APIClient.decodeMovie(data: jsonData!)
+        
+        XCTAssert(itemsList != nil, "could not decode")
+    }
+    
 }
