@@ -7,9 +7,12 @@
 //
 
 import XCTest
+@testable import OMDb_Movie_Search
 
 class OMDb_Movie_SearchUITests: XCTestCase {
-        
+    
+    var app: XCUIApplication!
+    
     override func setUp() {
         super.setUp()
         
@@ -18,9 +21,8 @@ class OMDb_Movie_SearchUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
     
     override func tearDown() {
@@ -28,9 +30,35 @@ class OMDb_Movie_SearchUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSearchPopupShownForEmptyTerm() {
+        
+        app.buttons["Go!"].tap()
+        XCTAssert(app.alerts[OMSStrings.noSearchTermTitle].exists, "no search term alert not shown")
+
+    }
+    
+    func testSearchResultsArePopulated() {
+        
+        app.textFields["searchTextField"].typeText("godfather")
+        app.buttons["Go!"].tap()
+        sleep(3)
+        XCTAssert(app.tables.cells.count > 0, "no items loaded in table")
+        
+    }
+    
+    func testItemDetailIsShown() {
+        
+        app.textFields["searchTextField"].typeText("godfather")
+        app.buttons["Go!"].tap()
+        sleep(3)
+        XCTAssert(app.tables.cells.count > 0, "no items loaded in table")
+        app.tables.cells.element(boundBy: 0).tap()
+        
+        sleep(2)
+        //assert that image has been loaded
+        XCTAssert(app.images.count == 1, "image not loaded")
+        //assert that type, title and summary have been loaded
+        XCTAssert(app.staticTexts.count == 3, "type, title or plot not loaded")
     }
     
 }
