@@ -27,8 +27,9 @@ class MovieDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        showLoadingIndicator()
         APIClient.getMovieDetails(id: itemId) { [weak self] (item) in
+            self?.hideLoadingIndicator()
             guard let loadedItem = item else {
                 if let strongSelf = self {
                     AlertHelper.display(presenter: strongSelf, title: OMSStrings.couldNotLoadDetailsTitle, message: OMSStrings.couldNotLoadDetailsMessage, dismissCompletion: { [weak self] (action) in

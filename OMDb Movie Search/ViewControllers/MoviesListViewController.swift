@@ -21,22 +21,27 @@ class MoviesListViewController: BaseViewController {
         }
     }
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.separatorStyle = .none
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
-        
+        showLoadingIndicator()
         APIClient.getMoviesList(searchTerm: currentSearchTerm) { [weak self] (result) in
+            self?.hideLoadingIndicator()
             guard let omdbItems = result else {
-                
+
                 if let strongSelf = self {
                     AlertHelper.display(presenter: strongSelf, title: OMSStrings.noResultsFoundTitle, message: OMSStrings.noResultsFoundMessage, dismissCompletion: { [weak self] (action) in
                         self?.navigationController?.popViewController(animated: true)
                     })
                 }
                 return
-                
+
             }
             self?.items = omdbItems
         }
