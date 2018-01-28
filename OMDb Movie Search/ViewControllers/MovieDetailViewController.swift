@@ -30,7 +30,11 @@ class MovieDetailViewController: BaseViewController {
         
         APIClient.getMovieDetails(id: itemId) { [weak self] (item) in
             guard let loadedItem = item else {
-                //show error
+                if let strongSelf = self {
+                    AlertHelper.display(presenter: strongSelf, title: OMSStrings.couldNotLoadDetailsTitle, message: OMSStrings.couldNotLoadDetailsMessage, dismissCompletion: { [weak self] (action) in
+                        self?.navigationController?.popViewController(animated: true)
+                    })
+                }
                 return
                 
             }
